@@ -1,0 +1,38 @@
+package Hw3;
+
+import java.util.Scanner;
+
+public class Hw3_1 {
+	public static void main(String[] args) {
+		int a;
+		int b;
+		int c;
+		double d; // 宣告一個double變數
+		Scanner sc = new Scanner(System.in);
+		System.out.println("請輸入：");
+		if (sc.hasNextInt()) {
+			// 系統判斷鍵盤輸入是否為int整數，結果為布林值
+			a = sc.nextInt();
+			b = sc.nextInt();
+			c = sc.nextInt();
+			if (a == 0 || b == 0 || c == 0) {
+				System.out.print("不是三角形");
+			} else if ((a == b && a != c) || (a == c && a != b)) {
+				System.out.print("這是等腰三角形");
+			} else if (((a * a) + (b * b) == (c * c)) || (a * a) + (c * c) == (b * b)) { // 直角三角形
+				System.out.print("這是直角三角形");
+			} else if (a == b && a == c)  {
+				System.out.print("這是正三角形");
+			} else {
+				System.out.print("其他三角形");
+			}
+			
+		} else {
+			System.out.print("請輸入數字");
+		}
+	}
+}
+	
+	
+	
+	
