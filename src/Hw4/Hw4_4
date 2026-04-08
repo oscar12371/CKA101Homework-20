@@ -1,0 +1,27 @@
+package Hw4;
+
+import java.util.Scanner;
+
+public class Hw4_4 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int[][] money = { { 25, 32, 8, 19, 27 }, { 2500, 800, 500, 1000, 1200 } };
+
+		System.out.println("窮B!!這次又要借多少??");
+
+		int takemymoney = sc.nextInt();
+		
+		int count = 0;
+		
+		for (int i=0;i<money[0].length;i++) {
+			if (money[1][i]>= takemymoney) {
+				System.out.print(money[0][i]+" ");
+				count++;
+			}
+			
+		}
+		System.out.print("這"+count+"個人可以借啦!滾!!!!!!!!!!!!!!!!!!!!!!!");
+	}
+
+}
