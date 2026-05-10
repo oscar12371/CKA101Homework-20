@@ -39,10 +39,24 @@ public class hw2 {
 		System.out.println("  ");
 		System.out.println("========= 5. ===========");
 		System.out.println("阿文很熱衷大樂透(1 ～49)，但他不喜歡有4的數字，不論是個位數或是十位數。請設計一隻程式，輸出結果為阿文可以選擇的數字有哪些？總共有幾個？");
+			int ans4 = 0;
+		int num1 = 1;
+		System.out.println("可選的數字有");
+		while (num1 <= 49) {
+			if (num1 / 10 == 4 || num1 % 10 == 4) {
+				num1++;
 
+			} else {
+				ans4 = ans4 + 1;
+				System.out.print(num1+" ");
+				num1++;
+			}
+
+		}
+		System.out.println();
+		System.out.println("共" + ans4 + "個");
 		
-		
-		
+			
 		System.out.println("  ");
 		System.out.println("========= 6. ===========");
 		System.out.println("請設計一隻Java程式，輸出結果為以下 12345678910 ...");
